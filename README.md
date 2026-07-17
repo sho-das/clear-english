@@ -75,7 +75,7 @@ and others can read. The other files are the same rules in each tool's own
 Made by **Soumya**.
 <!-- Fill these in before you push: -->
 - GitHub: https://github.com/sho-das
-- LinkedIn: https://www.linkedin.com/in/soumya-das-/
+- LinkedIn: https://www.linkedin.com/in/soumya-das-
 
 If it helps you, a ⭐ on the repo is welcome.
 
