@@ -31,29 +31,23 @@ It works in **Claude Code, Codex CLI, Cursor, and Gemini CLI**.
 
 ## Install
 
-Pick your tool. Each is copy-paste.
+Pick your tool below and follow the steps.
 
-Paths below use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
+Paths use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
 (for example `C:\Users\you`), and you use backslashes `\`.
 
 ### Claude Code
 
-**macOS / Linux**
-
-```bash
-mkdir -p ~/.claude/skills/clear-english
-# then copy SKILL.md into:  ~/.claude/skills/clear-english/SKILL.md
-```
-
-**Windows (PowerShell)**
-
-```powershell
-mkdir $HOME\.claude\skills\clear-english
-# then copy SKILL.md into:  %USERPROFILE%\.claude\skills\clear-english\SKILL.md
-```
-
-Start a new Claude Code session. Type `/clear-english`, or let it turn on by
-itself when Claude explains something.
+1. Make the folder:
+   - macOS / Linux: `mkdir -p ~/.claude/skills/clear-english`
+   - Windows (PowerShell): `mkdir $HOME\.claude\skills\clear-english`
+2. Copy [`claude-code/SKILL.md`](claude-code/SKILL.md) from this repo into that
+   folder:
+   - macOS / Linux: `~/.claude/skills/clear-english/SKILL.md`
+   - Windows: `%USERPROFILE%\.claude\skills\clear-english\SKILL.md`
+3. Start a new Claude Code session.
+4. Use it: type `/clear-english`, or let it turn on by itself when Claude
+   explains something.
 
 **Always on (optional):** add one line to your Claude instructions file —
 `~/.claude/CLAUDE.md` (Windows: `%USERPROFILE%\.claude\CLAUDE.md`):
@@ -61,25 +55,26 @@ itself when Claude explains something.
 
 ### Codex CLI
 
-Copy [`codex/AGENTS.md`](codex/AGENTS.md) into your global Codex file, or paste
-its rules into your project's own `AGENTS.md`. Codex reads it on every run.
-
-- macOS / Linux: `~/.codex/AGENTS.md`
-- Windows: `%USERPROFILE%\.codex\AGENTS.md`
+1. Copy [`codex/AGENTS.md`](codex/AGENTS.md) from this repo.
+2. Put it in your global Codex file (or your project's own `AGENTS.md`):
+   - macOS / Linux: `~/.codex/AGENTS.md`
+   - Windows: `%USERPROFILE%\.codex\AGENTS.md`
+3. Done — Codex reads it on every run.
 
 ### Cursor
 
-Copy [`cursor/clear-english.mdc`](cursor/clear-english.mdc) into your project's
-`.cursor/rules/` folder. This path is inside your project, so it is the same on
-every system. It is set to always apply.
+1. Copy [`cursor/clear-english.mdc`](cursor/clear-english.mdc) from this repo.
+2. Put it in your project's `.cursor/rules/` folder (the same path on every
+   system).
+3. Done — it is set to always apply.
 
 ### Gemini CLI
 
-Copy [`gemini/GEMINI.md`](gemini/GEMINI.md) into your project, or into your
-global Gemini config. Gemini reads it on every run.
-
-- macOS / Linux: `~/.gemini/`
-- Windows: `%USERPROFILE%\.gemini\`
+1. Copy [`gemini/GEMINI.md`](gemini/GEMINI.md) from this repo.
+2. Put it in your project, or your global Gemini config:
+   - macOS / Linux: `~/.gemini/`
+   - Windows: `%USERPROFILE%\.gemini\`
+3. Done — Gemini reads it on every run.
 
 ## Why this format works everywhere
 
