@@ -41,7 +41,7 @@ Paths use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
 1. Make the folder:
    - macOS / Linux: `mkdir -p ~/.claude/skills/clear-english`
    - Windows (PowerShell): `mkdir $HOME\.claude\skills\clear-english`
-2. Copy [`claude-code/SKILL.md`](claude-code/SKILL.md) from this repo into that
+2. Copy [`claude/SKILL.md`](claude/SKILL.md) from this repo into that
    folder:
    - macOS / Linux: `~/.claude/skills/clear-english/SKILL.md`
    - Windows: `%USERPROFILE%\.claude\skills\clear-english\SKILL.md`
