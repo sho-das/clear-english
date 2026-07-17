@@ -12,7 +12,8 @@ removes something that confuses readers.
 
 1. **Fork** this repo (the "Fork" button, top-right).
 2. Make your change on your own copy.
-3. Open a **Pull Request** back to `main`.
+3. Open a **Pull Request**, and set the base branch to **`development`** (not
+   `main`). All changes are reviewed on `development` first; `main` stays stable.
 
 You cannot merge into this repo — only the maintainer can. Your Pull Request is
 a suggestion. It stays open until the maintainer reviews it and chooses to merge
