@@ -33,35 +33,53 @@ It works in **Claude Code, Codex CLI, Cursor, and Gemini CLI**.
 
 Pick your tool. Each is copy-paste.
 
+Paths below use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
+(for example `C:\Users\you`), and you use backslashes `\`.
+
 ### Claude Code
+
+**macOS / Linux**
 
 ```bash
 mkdir -p ~/.claude/skills/clear-english
-# then copy SKILL.md from this repo into that folder:
-#   ~/.claude/skills/clear-english/SKILL.md
+# then copy SKILL.md into:  ~/.claude/skills/clear-english/SKILL.md
+```
+
+**Windows (PowerShell)**
+
+```powershell
+mkdir $HOME\.claude\skills\clear-english
+# then copy SKILL.md into:  %USERPROFILE%\.claude\skills\clear-english\SKILL.md
 ```
 
 Start a new Claude Code session. Type `/clear-english`, or let it turn on by
 itself when Claude explains something.
 
-**Always on (optional):** add one line to `~/.claude/CLAUDE.md`:
+**Always on (optional):** add one line to your Claude instructions file —
+`~/.claude/CLAUDE.md` (Windows: `%USERPROFILE%\.claude\CLAUDE.md`):
 `For all prose explanations, follow the clear-english skill's voice rules.`
 
 ### Codex CLI
 
-Copy [`codex/AGENTS.md`](codex/AGENTS.md) into `~/.codex/AGENTS.md` (global), or
-paste its rules into your project's own `AGENTS.md`. Codex reads this on every
-run.
+Copy [`codex/AGENTS.md`](codex/AGENTS.md) into your global Codex file, or paste
+its rules into your project's own `AGENTS.md`. Codex reads it on every run.
+
+- macOS / Linux: `~/.codex/AGENTS.md`
+- Windows: `%USERPROFILE%\.codex\AGENTS.md`
 
 ### Cursor
 
 Copy [`cursor/clear-english.mdc`](cursor/clear-english.mdc) into your project's
-`.cursor/rules/` folder. It is set to always apply.
+`.cursor/rules/` folder. This path is inside your project, so it is the same on
+every system. It is set to always apply.
 
 ### Gemini CLI
 
-Copy [`gemini/GEMINI.md`](gemini/GEMINI.md) into your project (or your global
-Gemini config). Gemini reads this on every run.
+Copy [`gemini/GEMINI.md`](gemini/GEMINI.md) into your project, or into your
+global Gemini config. Gemini reads it on every run.
+
+- macOS / Linux: `~/.gemini/`
+- Windows: `%USERPROFILE%\.gemini\`
 
 ## Why this format works everywhere
 
