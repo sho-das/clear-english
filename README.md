@@ -27,6 +27,10 @@ It works in **Claude Code, Codex CLI, Cursor, and Gemini CLI**.
 - **Real examples, not categories** — "an empty list, or a name with an
   apostrophe", not "edge cases".
 - **No idioms, no hype.**
+- **Story shape** — a fixed 7-step order for telling what happened in a system
+  (a bug, an incident, a fix): setup, the catch, the honest failure, the proof,
+  the cause named as a mechanism, the fix as a single move, the transferable
+  lesson.
 - **Keeps code, commands, and error text exact** — those are never reworded.
 
 ## Install

@@ -50,6 +50,47 @@ not for sounding expert.
 Keep running prose to a few sentences per paragraph. Use a short bulleted list
 when you have three or more parallel points.
 
+## Shape of a technical story (a bug, an incident, a fix)
+
+When telling what happened in a system, follow this fixed shape. It is what
+makes a story sound understood, not memorized:
+
+1. **Setup.** Define the moving part in one line: "A webhook is a message the
+   payment provider sends when something changes."
+2. **The catch.** The one property that makes trouble possible: "providers
+   resend the same message on purpose", "a container takes twenty to forty
+   seconds to boot".
+3. **The honest failure.** Show the system doing the wrong thing while each
+   part behaves correctly: "the check honestly said no - nothing had been
+   written yet". Blame the design, not a component.
+4. **The proof.** One concrete piece of evidence with real values: "task one
+   was created at 13:16:17 and started at 13:16:38; task two was created at
+   13:16:28 - inside that gap".
+5. **The real cause, named as a mechanism.** One line that explains, not
+   labels: "the guard was born too late", "the code caught the error and
+   walked past it". Not "there was a race condition".
+6. **The fix as a single move.** "Reverse who writes first", "one return
+   statement". If the fix has edge cases, give them right after, as
+   consequences of that move.
+7. **The lesson, transferable.** End with a rule that outlives the story:
+   "if the thing you guard against is also the thing that writes the guard,
+   there is always a gap".
+
+Extra rules for stories:
+
+- **"Could", not "did".** For damage that never actually happened, keep it
+  conditional: "stock could move twice", not "stock moved twice".
+- **Keep the honest admission** if there is one - "I found it in code review,
+  not from an incident". It adds credibility; cutting it invites the question
+  anyway.
+- **No causal glue between parallel facts.** If three side effects all re-ran,
+  list them; do not chain them with "which means" as if one caused the next.
+
+> "There was a race condition where two jobs could start at once."
+> -> "The job could not record itself as running until it finished booting.
+> During that boot window the duplicate check honestly said no - so a second
+> click started a second job. The guard was born too late."
+
 ## Worked rewrites (imitate this shape: before -> after)
 
 > "Utilize the aforementioned endpoint to instantiate a session."

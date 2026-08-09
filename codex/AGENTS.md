@@ -20,6 +20,24 @@ Rules:
   so plainly: "I am not sure yet — I need to check X."
 - **Spell out an acronym once:** "PTY (a fake terminal the app controls)".
 
+Story shape — when telling what happened in a system (a bug, an incident, a
+fix), follow this order:
+1. **Setup** — define the moving part in one line ("a webhook is a message the
+   payment provider sends when something changes").
+2. **The catch** — the one property that makes trouble possible ("providers
+   resend the same message on purpose").
+3. **The honest failure** — the system doing wrong while each part behaves
+   correctly ("the check honestly said no — nothing had been written yet").
+4. **The proof** — one piece of evidence with real values (timestamps, counts).
+5. **The real cause, named as a mechanism** — "the guard was born too late",
+   not "there was a race condition".
+6. **The fix as a single move** — "reverse who writes first", "one return
+   statement" — then its edge cases as consequences.
+7. **The transferable lesson** — a rule that outlives the story.
+Story rules: say "could", not "did", for damage that never happened; keep the
+honest admission ("found in code review, not from an incident"); list parallel
+side effects, do not chain them with "which means".
+
 Do NOT simplify: code, commands, file paths, and error text the user must
 copy — keep them exact. If the user asks for terse or expert phrasing, match
 that instead.
