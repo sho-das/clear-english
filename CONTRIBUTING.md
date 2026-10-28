@@ -4,7 +4,7 @@ Thanks for your interest in Clear English.
 
 This project is small and opinionated on purpose. The rules are meant to stay
 stable, so most of the time nothing changes. Please do not expect every idea to
-be merged — that is not a judgment of you or your idea. A change is merged only
+be merged - that is not a judgment of you or your idea. A change is merged only
 when it clearly makes the rules **easier to follow**, fixes a real mistake, or
 removes something that confuses readers.
 
@@ -15,7 +15,7 @@ removes something that confuses readers.
 3. Open a **Pull Request**, and set the base branch to **`development`** (not
    `main`).
 
-You cannot merge into this repo — only the maintainer can. Your Pull Request is
+You cannot merge into this repo - only the maintainer can. Your Pull Request is
 a suggestion. It stays open until the maintainer reviews it and chooses to merge
 it or close it. Your fork stays yours to keep and use either way.
 
@@ -25,7 +25,7 @@ Request.
 ## What is likely to be merged
 
 - A clearer wording of a rule, with a short **before → after** example.
-- A real fix — a rule that is wrong, or an example that does not match its rule.
+- A real fix - a rule that is wrong, or an example that does not match its rule.
 - A small, focused change. One idea per Pull Request.
 
 ## What is unlikely to be merged

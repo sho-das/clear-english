@@ -1,11 +1,11 @@
 # Clear English
 
-**Make your AI coding assistant reply in clear, simple English — without losing any meaning.**
+**Make your AI coding assistant reply in clear, simple English - without losing any meaning.**
 
 If English is not your first language, AI replies can be hard to read: long
 sentences, jargon dropped with no explanation, idioms, and hype words like
 "robust" or "seamless" that carry no real information. This is a small set of
-rules that fixes that. It keeps every fact exact — only the wording gets simpler.
+rules that fixes that. It keeps every fact exact - only the wording gets simpler.
 
 It works in **Claude Code, Codex CLI, Cursor, and Gemini CLI**.
 
@@ -15,23 +15,26 @@ It works in **Claude Code, Codex CLI, Cursor, and Gemini CLI**.
 > → **"Use that endpoint to start a session."**
 
 > "The build is failing due to a type error in the routing layer."
-> → **"The build stops because one value has the wrong type — the code expects
+> → **"The build stops because one value has the wrong type - the code expects
 > text but gets a number. It happens in the file that handles page routes."**
 
 ## What it does
 
-- **Common word first** — "use" not "utilize", "start" not "initiate".
-- **One idea per sentence** — splits long, stacked sentences.
-- **Defines a term once**, then uses it — "a hook (a small script the tool runs
+- **Short replies for every reader** - at most 3 headings and 10 bullets, one
+  fact per bullet, plain meaning first and the file or command last. A
+  non-technical reader gets the point; a technical reader gets the exact place.
+- **Common word first** - "use" not "utilize", "start" not "initiate".
+- **One idea per sentence** - splits long, stacked sentences.
+- **Defines a term once**, then uses it - "a hook (a small script the tool runs
   at a set moment)".
-- **Real examples, not categories** — "an empty list, or a name with an
+- **Real examples, not categories** - "an empty list, or a name with an
   apostrophe", not "edge cases".
 - **No idioms, no hype.**
-- **Story shape** — a fixed 7-step order for telling what happened in a system
+- **Story shape** - a fixed 7-step order for telling what happened in a system
   (a bug, an incident, a fix): setup, the catch, the honest failure, the proof,
   the cause named as a mechanism, the fix as a single move, the transferable
   lesson.
-- **Keeps code, commands, and error text exact** — those are never reworded.
+- **Keeps code, commands, and error text exact** - those are never reworded.
 
 ## Install
 
@@ -53,7 +56,7 @@ Paths use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
 4. Use it: type `/clear-english`, or let it turn on by itself when Claude
    explains something.
 
-**Always on (optional):** add one line to your Claude instructions file —
+**Always on (optional):** add one line to your Claude instructions file -
 `~/.claude/CLAUDE.md` (Windows: `%USERPROFILE%\.claude\CLAUDE.md`):
 `For all prose explanations, follow the clear-english skill's voice rules.`
 
@@ -63,14 +66,14 @@ Paths use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
 2. Put it in your global Codex file (or your project's own `AGENTS.md`):
    - macOS / Linux: `~/.codex/AGENTS.md`
    - Windows: `%USERPROFILE%\.codex\AGENTS.md`
-3. Done — Codex reads it on every run.
+3. Done - Codex reads it on every run.
 
 ### Cursor
 
 1. Copy [`cursor/clear-english.mdc`](cursor/clear-english.mdc) from this repo.
 2. Put it in your project's `.cursor/rules/` folder (the same path on every
    system).
-3. Done — it is set to always apply.
+3. Done - it is set to always apply.
 
 ### Gemini CLI
 
@@ -78,11 +81,11 @@ Paths use `~` for your home folder. On **Windows** that is `%USERPROFILE%`
 2. Put it in your project, or your global Gemini config:
    - macOS / Linux: `~/.gemini/`
    - Windows: `%USERPROFILE%\.gemini\`
-3. Done — Gemini reads it on every run.
+3. Done - Gemini reads it on every run.
 
 ## Why this format works everywhere
 
-The rules are the same in every file — only the file's **name and location**
+The rules are the same in every file - only the file's **name and location**
 change per tool. `SKILL.md` is a shared format that Claude Code, Codex, Cursor,
 and others can read. The other files are the same rules in each tool's own
 "always-on instructions" file.
@@ -98,4 +101,4 @@ If it helps you, a ⭐ on the repo is welcome.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Use it, change it, share it.
+MIT - see [LICENSE](LICENSE). Use it, change it, share it.
